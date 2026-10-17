@@ -132,7 +132,7 @@
     </header>
 
     <div class="container">
-        <!-- 電話案内への移動ボタン（JavaScriptでスムーズに移動させます） -->
+        <!-- 電話案内への移動ボタン -->
         <div class="btn-container">
             <button class="order-btn" onclick="document.getElementById('info').scrollIntoView({ behavior: 'smooth' });">📞 電話でテイクアウト注文する</button>
         </div>
@@ -174,5 +174,14 @@
         <p>&copy; 2026 とも All Rights Reserved.</p>
     </div>
 
+    <!-- ページを開いたときに必ず一番上から表示させる仕組み -->
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
 </body>
 </html>
