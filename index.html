@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>町のたこ焼き屋さん とも</title>
     <style>
-        html {
-            scroll-behavior: smooth; /* スムーズにスクロール移動する設定 */
-        }
         body {
             font-family: sans-serif;
             background-color: #fff9f0;
@@ -91,6 +88,8 @@
             text-decoration: none;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
         }
         .order-btn:hover {
             background-color: #bf360c;
@@ -125,7 +124,7 @@
 </head>
 <body>
 
-    <header id="top">
+    <header>
         <!-- 跳ねるタコちゃん -->
         <div class="tako-character">🐙</div>
         <h1>町のたこ焼き屋さん<br>とも</h1>
@@ -133,9 +132,9 @@
     </header>
 
     <div class="container">
-        <!-- 電話案内への移動ボタン -->
+        <!-- 電話案内への移動ボタン（JavaScriptでスムーズに移動させます） -->
         <div class="btn-container">
-            <a href="#info" class="order-btn">📞 電話でテイクアウト注文する</a>
+            <button class="order-btn" onclick="document.getElementById('info').scrollIntoView({ behavior: 'smooth' });">📞 電話でテイクアウト注文する</button>
         </div>
 
         <!-- お店のご案内 -->
@@ -175,12 +174,5 @@
         <p>&copy; 2026 とも All Rights Reserved.</p>
     </div>
 
-    <!-- ページを開いた時は常に一番上から表示させる処理 -->
-    <script>
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-    </script>
 </body>
 </html>
