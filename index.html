@@ -25,6 +25,7 @@
         header h1 {
             margin: 0.5rem 0 0;
             font-size: 2rem;
+            line-height: 1.3;
         }
         header p {
             margin: 0.5rem 0 0;
@@ -124,10 +125,10 @@
 </head>
 <body>
 
-    <header>
+    <header id="top">
         <!-- 跳ねるタコちゃん -->
         <div class="tako-character">🐙</div>
-        <h1>町のたこ焼き屋さん とも</h1>
+        <h1>町のたこ焼き屋さん<br>とも</h1>
         <p>外はカリッと、中はトロッと。昭和から続く懐かしい味。</p>
     </header>
 
@@ -137,7 +138,7 @@
             <a href="#info" class="order-btn">📞 電話でテイクアウト注文する</a>
         </div>
 
-        <!-- お店のご案内（#info の位置へスクロール移動します） -->
+        <!-- お店のご案内 -->
         <div class="card" id="info">
             <h2>🏠 お店のご案内</h2>
             <p>いらっしゃいませ！当店は地元に愛されて30年、こだわりの出汁と厳選されたタコを使用したアツアツのたこ焼きをご提供しています。</p>
@@ -174,5 +175,12 @@
         <p>&copy; 2026 とも All Rights Reserved.</p>
     </div>
 
+    <!-- ページを開いた時は常に一番上から表示させる処理 -->
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    </script>
 </body>
 </html>
