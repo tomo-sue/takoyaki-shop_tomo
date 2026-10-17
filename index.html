@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>町のたこ焼き屋さん 浪花屋</title>
+    <title>町のたこ焼き屋さん とも</title>
     <style>
+        html {
+            scroll-behavior: smooth; /* スムーズにスクロール移動する設定 */
+        }
         body {
             font-family: sans-serif;
             background-color: #fff9f0;
@@ -124,17 +127,18 @@
     <header>
         <!-- 跳ねるタコちゃん -->
         <div class="tako-character">🐙</div>
-        <h1>町のたこ焼き屋さん 浪花屋</h1>
+        <h1>町のたこ焼き屋さん とも</h1>
         <p>外はカリッと、中はトロッと。昭和から続く懐かしい味。</p>
     </header>
 
     <div class="container">
-        <!-- 注文するボタン -->
+        <!-- 電話案内への移動ボタン -->
         <div class="btn-container">
-            <a href="tel:0000000000" class="order-btn">📞 電話でテイクアウト注文する</a>
+            <a href="#info" class="order-btn">📞 電話でテイクアウト注文する</a>
         </div>
 
-        <div class="card">
+        <!-- お店のご案内（#info の位置へスクロール移動します） -->
+        <div class="card" id="info">
             <h2>🏠 お店のご案内</h2>
             <p>いらっしゃいませ！当店は地元に愛されて30年、こだわりの出汁と厳選されたタコを使用したアツアツのたこ焼きをご提供しています。</p>
             <p><strong>電話番号：</strong> 00-0000-0000</p>
@@ -167,7 +171,7 @@
     </div>
 
     <div class="footer">
-        <p>&copy; 2026 浪花屋 All Rights Reserved.</p>
+        <p>&copy; 2026 とも All Rights Reserved.</p>
     </div>
 
 </body>
